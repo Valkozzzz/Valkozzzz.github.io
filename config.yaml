@@ -1,0 +1,362 @@
+
+baseURL: "https://Valkozzzz.github.io"
+languageCode: "en-us"
+title: "Portfolio"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: AP
+      name: AP et Projets
+      title: AP et Projets
+      url: /projets/
+      weight: 1
+       #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Portfolio"
+  description: Bienvenue sur mon super site
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME" 
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 500 # default: 400
+    lineHeight: 2 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Hugo Profile" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Bonjour, je suis"
+    title: "Thomas Déré."
+    subtitle: "Je suis étudiant en tant qu'administrateur réseau"
+    content: "Fan de réseau, je créer ce portfolio pour mon épreuve E4 et également pour me présenter."
+    image:
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Mon autre Portofilio"
+      url: "https://derethomas52.wixsite.com/thomas"
+      download: true
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/Valkozzzz
+        - icon: fab fa-x-twitter
+          url: https://twitter.com/Valkozzz
+        - icon: fab fa-linkdin
+          url: https://fr.linkedin.com/in/thomas-déré
+      customIcons:
+        - icon: /fav.png
+          url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "A propos de Moi"
+   # image: "/images/me.png"
+    content: |-
+     Je suis un étudiant en SIO2 et ceci est mon portfolio.
+
+          Competence:
+        - "PFsense"
+        - "Proxmox"
+        - "Parametrage de Switch"
+        - "Windows server"
+
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Technicien Informatique"
+        company: "Sam Informatique"
+        date: "Janvier 2024 - Fevrier 2024"
+        featuredLink:
+          enable: true
+          name: "Site Internet de l'entreprise"
+          url: "http://www.saminformatique.com"
+        content: "J'ai réalisé mon 4ème stage chez Sam Informatique dans l'atelier, j'ai réaliser divers réparation sur du mateiel informatique."
+ 
+      - job: "Employé saisonier"
+        company: "E.Leclerc"
+        companyUrl: "https://www.e.leclerc"
+        date: "Juillet 2022/Décembre 2022/Juillet 2023/Décembre 2023"
+        featuredLink:
+          enable: true
+          url: "https://www.e.leclerc"
+        info:
+          enable: true
+          content: "J'ai travaillé 4 fois au leclerc de Neufchateau pour des jobs étudiants"
+        content: |
+         J'ai réalisé 4 job étudiants au leclerc en tant que assisant boucher à deux reprises,  assistant traiteur et assisant a la fraiche découpe.
+
+      - job: "Technicien Electro-menager"
+        company: "Pro & Companie"
+        companyUrl: "www.procie-neufchateau.com"
+        date: "Jan 2020 - Aug 2020"
+        info:
+            enable: true
+        featuredLink:
+          enable: true
+          url: "www.procie-neufchateau.com"
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "BTS SIO"
+        school:
+          name: "Lycée Bouchardon, Chaumont"
+          url: "https://lyc-bouchardon.monbureaunumerique.fr"
+        date: "2022-2024"
+        GPA:
+        content: |-
+          Ce que j'ai fais :
+            - Support et mise à disposition de services informatiques.
+            - Cybersécurité des services informatiques.
+            - Administration des systèmes et des réseaux.
+
+      - title: "Bac professionnel systèmes numériques spécialisé en ARED"
+        school:
+          name: "Lycée Eugène Decomble, Chaumont "
+          url: "https://lyc-decomble.monbureaunumerique.fr"
+        date: "2020-2022"
+        GPA: "Admis Mention Très Bien"
+        content: |-
+          Ce que j'ai fais :
+          - Electroménager.
+          - Sécurité.
+          - Réseau
+
+      - title: "Seconde générale et technologique"
+        school:
+          name: "Lycée Pierre et Marie Curie, Neufchateau."
+          url: "https://www.citescolaire-neufchateau.fr"
+
+  # realisation
+  realisation:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Pix
+        content: Certification.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Serveur de deploiement
+        content: Un serveur qui permet de deployé un os (ici Windows) sur des ordinateurs distant via le réseau.
+        image: false
+        featured:
+          name: Exemple
+          link: https://www.youtube.com/watch?v=fLWAT17oHVQ
+        badges:
+          - "Windows"
+          - "AD/DNS/DHCP"
+          - ""
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+      - title: Glpi
+        content: Un outil de gestion de ticket en cas de probleme dans une entreprise.
+        image: false
+        featured:
+          name: Exemple
+          link: https://
+        badges:
+          - "GLPI"
+          - "Fusion Inventory"
+        links:
+            url: https://github.com/gurusabarish/converter
+
+      - title: Hugo Profile V2
+        content:  Mon projet Hugo qui me sert de portfolio.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Portfolio
+          link: https://
+        badges:
+          - "Portfolio V2"
+          - "Bootstrap"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Si vous avez des questions, vous pouvez me contacter via mon mail je repond rapidement !
+    email: lolthomas52@gmail.com
+    btnName: Contactez moi
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/Valkozzzz
+      linkedin: https://fr.linkedin.com/in/thomas-déré
+      twitter: https://twitter.com
+      instagram: https://instagram.com
+      facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table des matières"
+    copyright: "Pas le droit de copier"
+    pageNotFound: "Il faut mieux chercher... ou ça marche pas"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+
